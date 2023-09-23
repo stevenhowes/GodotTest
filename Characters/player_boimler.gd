@@ -17,6 +17,8 @@ func _physics_process(_delta):
 
 	update_animation_parameters(input_direction)
 	
+	input_direction = input_direction.normalized()
+	
 	velocity = input_direction * move_speed
 
 	pick_new_state()
